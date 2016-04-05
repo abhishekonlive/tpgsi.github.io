@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>TurningPoint</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- Web Fonts -->
+	    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../assets/plugins/animate.css">    
+    <link rel="stylesheet" href="../assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/plugins/revolution-slider/rs-plugin/css/settings.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+	     <link rel="stylesheet" type="text/css" href="../assets/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/css/jquery.jscrollpane.css" media="all" />
+	
+<style>
+
+/*Flat Testimonials
+------------------------------------*/
+.flat-testimonials {
+  padding: 50px 0;   
+  background-color: #333;
+}
+
+.flat-testimonials .flat-testimonials-in {
+	padding: 30px;
+	margin-bottom: 0px;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.11);
+}
+.flat-testimonials .flat-testimonials-in:hover {
+	padding: 30px;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.21);
+	cursor:pointer;
+}
+
+.flat-testimonials .flat-testimonials-in img {
+    width: 170px;
+    height: 170px;
+  margin: 0 auto 25px;
+}
+
+.flat-testimonials .flat-testimonials-in h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.flat-testimonials .flat-testimonials-in span {
+  display: block;
+  margin-bottom: 5px;
+  color:#BDC02C;
+  font-weight:bold;
+}
+
+.flat-testimonials .flat-testimonials-in p {
+  color: #fff;
+  font-weight: 200;
+  position: relative;
+}
+
+.flat-testimonials .flat-testimonials-in p:before,
+.flat-testimonials .flat-testimonials-in p:after {
+  top: 5px;
+  font-size: 22px;
+  line-height: 10px;
+  position: relative;
+}
+
+.flat-testimonials .flat-testimonials-in p:before {
+  content: """;
+  padding-right: 5px;
+}
+
+.flat-testimonials .flat-testimonials-in p:after {
+  content: """;
+  padding-left: 5px;
+}
+.bg-image-v1 {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  position: relative;
+  background: url(../assets/img/bg/11.jpg) repeat fixed;
+	background: url(../assets/img/bg/Clipboard01.jpg) repeat fixed;  
+}
+
+.bg-image-v1:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  content: " ";
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+.headline-light h2{
+    color: #fff !important;
+}
+.headline-center h2 {
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+.headline-center h2:after {
+    left: 45%;
+    z-index: 1;
+    width: 130px;
+    height: 2px;
+    content: " ";
+    bottom: -5px;
+    margin-left: -15px;
+    text-align: center;
+    position: absolute;
+    background: #72c02c;
+}
+.headline-center.headline-light p {
+    color: #fff;
+	    position: relative;
+}
+.rounded-x {
+    border-radius: 100% !important;
+}
+.tp-modal .modal-content{
+	    border-radius: 0px;
+	    background-color: rgba(14, 14, 14, 0.93);
+		    background: #fff;
+    border: 1px solid #adadad;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+    color: #212121;
+}
+.tp-modal .modal-dialog{
+    margin: 60px auto;
+}
+.tp-modal .modal-body{
+       color: #808080;
+	       padding: 35px;
+}
+
+/* Overlay style */
+
+.overlay {
+z-index:9998;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(153, 204, 51, 0.9);
+}
+/* Overlay closing cross */
+
+.overlay .overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  background: url(file:///C|/Users/Abhishek.TP-DECE-ABHISHE/Desktop/img/cross.png) no-repeat center center #FFF;
+  text-indent: 200%;
+  color: #000;
+  outline: none;
+  z-index: 100;
+}
+/* Menu style */
+
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.overlay ul li a {
+  font-size: 54px;
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: #f0f0f0;
+}
+/* Effects */
+
+.overlay-scale {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.overlay-scale.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.info {
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+
+.profile-tabs ul li{
+ width:100%;
+}
+.profile-tabs > ul.nav.nav-tabs {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+	border-bottom: 0;
+}
+.profile-tabs > ul.nav.nav-tabs > li.active .flat-testimonials-in {
+    background-color: #464646;
+	-o-box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+    -ms-box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+    -moz-box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+	border-radius:5px 5px 0 0;
+}
+.profile-tabs > ul.nav.nav-tabs > li {
+    float: none;
+    display: table-cell;
+	width:100%;
+	    padding: 10px 10px 0 20px;
+	    z-index: 8;
+}
+.profile-tabs > ul.nav.nav-tabs > li > a {
+	text-align: center;
+	padding:0;
+	background-color: transparent;
+	border:0;
+	border-radius: 0;
+}
+.profile-tabs .tab-content>.active p{
+color: #fff;
+}
+.profile-tabs .tab-content>.active{
+	color: #fff;
+	    margin: 0px 12px 20px 20px;
+	display: table;
+	table-layout: fixed;
+	padding:30px;
+	    position: relative;
+		    -o-box-shadow: 0 0 4px rgba(0,0,0,.4);
+    -ms-box-shadow: 0 0 4px rgba(0,0,0,.4);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4);
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    background-color: #464646;
+    z-index: 7;
+}
+
+</style>
+</head>	
+
+<body class="header-fixed" style="height: 100%;">
+<div class="wrapper">
+    <!--=== Header v5 ===-->   
+    <div class="header-v5 header-static">
+        <!-- Topbar v3 -->
+        <div class="topbar-v3">
+            <div class="search-open">
+                <div class="container">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="search-close"><i class="icon-close"></i></div>
+                </div>    
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-lg-6">
+                        <!-- Topbar Navigation -->
+                        <ul class="left-topbar">
+							<li><a href="#">SITE MAP</a></li>
+                        </ul><!--/end left-topbar-->
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-lg-6">
+                        <ul class="list-inline right-topbar pull-right">
+                            <li><a href="../login.html">EMPLOYEE LOGIN</a>&nbsp;&nbsp; | </li>
+                            <li><i class="search fa fa-search search-button"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--/container-->
+        </div>
+
+
+        <!-- Navbar -->
+        <div class="navbar navbar-default mega-menu" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html">
+                        <img id="logo-header" src="../assets/img/Logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <!-- Nav Menu -->
+                    <ul class="nav navbar-nav">
+                        <!-- Pages -->
+                        <li class="dropdown">
+                            <a href="../index.html" class="dropdown-toggle">
+                                Home
+                            </a>
+                        </li>
+                        <li class="dropdown active">
+                            <a href="aboutUs.html" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="aboutUs.html">Who we are</a></li>
+                                <li class=""><a href="mgmt_team3.html">Management Team</a></li>
+                                <li class=""><a href="CorporateFacts.html">Corporate Facts</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+								Services
+							</a>
+							<ul class="dropdown-menu">
+								<li class=""><a href="../services/government-sector.html">Government Sector</a></li>
+								<li class=""><a href="../services/commercial-sector.html">Commercial Sector</a></li>
+							</ul>
+                        </li>
+                        <li class="dropdown">
+                           <a href="../careers.html">
+                                Join Us
+                            </a>
+                        </li>
+                        
+                        
+                        <li class="dropdown">
+                            <a href="../news.html">
+                                News
+                            </a>
+                        </li>
+						<li class="dropdown">
+                            <a href="../contactUs.html">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Nav Menu -->
+                </div>
+            </div>    
+        </div>            
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header v5 ===-->
+<div class="flat-testimonials bg-image-v1 parallaxBg1" style="background-position: 50% -322px;">
+	<div class="container">
+
+			<div class="headline-center text-center headline-light margin-bottom-60">
+				<h2>Our Amazing Management Team…</h2>
+				 <p>Here you can see the majority of our team. We all work closely together and we love what we do !</p>
+			</div>
+			
+		<div class="row">
+			<div id="ca-container" class="ca-container mgmt">
+				<div class="ca-wrapper">
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/Bangalore.jpg" alt="">
+							</div>
+							<h3>Bangalore S. Shivacharan</h3>
+							<h2>Chief Executive Officer</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Bangalore is responsible for strategic growth and managing overall operations of TurningPoint...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Bangalore S. Shivacharan</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Bangalore has over 25 years of Engineering and Management experience encompassing both commercial and public sectors. Prior to starting TurningPoint, Bangalore was the co-founder and Chief Technology Officer of Wisor Telecom Corporation where he designed and built next generation Telecommunications Operational Support Systems for the competitive local exchange carrier and enterprise market. Bangalore has extensive experience in distributed object oriented, high transaction enterprise system architecture, information security framework, and Internet and wireless communication technologies. Bangalore has made significant contributions to the technology and telecommunications industry as a technologist in distributed OO computing and telecommunication network management. Prior to Wisor, Bangalore held key technology positions with Hughes Network Systems (HNS), Data General Corporation, Electronic Data Systems (EDS) and Cap Gemini. While working for EDS and CapGemini, Bangalore played key technology roles on several federal government contracts.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/David.jpg" alt="">
+							</div>
+							<h3>David R. Hughes</h3>
+							<h2>Managing Partner and Co-Founder</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Dave is responsible for managing TurningPoint’s sales and marketing organizations...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>David R. Hughes</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>In 2002, Dave teamed up with Bangalore to start TurningPoint Global Solutions. Dave is responsible for managing TurningPoint’s sales and marketing organizations. During his 30-year career in progressive management positions Dave has assisted organizations in procuring software and services that increase revenue and improve operational performance. Dave began his career with Telephone Industry Consultants (TELIC) – a firm that was acquired by Computer Sciences Organization to expand its telecommunication presence. He has also served as the Regional Vice President of Sales for TCSI, a pioneer in object oriented software development methodologies and tools. In 1998 Dave co-founded Wisor Telecom, a software products and services company serving the telecommunications market. At Wisor, Dave helped deliver a core set of software product and services that assisted Verizon, BellSouth, and SBC Communications in meeting their 1996 Telecom Act 271 requirements in certifying that their back office systems met industry guidelines, thereby enabling these companies to sell long distance service outside their primary markets.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/mike2.jpg" alt="">
+							</div>
+							<h3>Michael Edwards</h3>
+							<h2>Senior Vice President – Federal Health Care IT</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Mike is responsible for TurningPoint's Federal Health Care IT and consulting services to our Federal Health Care IT customers...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Michael Edwards</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Mike is responsible for TurningPoint's Federal Health Care IT and consulting services to our Federal Health Care IT customers. He has over 30 years of software project management experience in both the public and private sectors. Mike brings a wealth of business process knowledge and expertise to TurningPoint. He is responsible for managing projects with complex business processes involving large scale federal programs, and is assisting in establishing program management processes on several customer engagements. Prior to joining TurningPoint in 2004, Mike was Vice President of Software Development and Project Management at eCommerce Industries Inc. He has over 24 years of software engineering experience in developing innovative solution for the eCommerce and Supply Chain industry verticals. Prior to eCommerce, Mike spent four years at Net2000 where he rose to Vice President of Billing Operations and Information Technology. Mike spent 14 years at Harris corporation where he managed extensive software development projects and programs. Mike holds a Bachelor of Science Degree in Electrical Engineering from Southern Illinois University.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div id="ca-container2" class="ca-container mgmt">
+				<div class="ca-wrapper">
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/Silvio_Renzi.jpg" alt="">
+							</div>
+							<h3>Silvio Renzi</h3>
+							<h2>Vice President of Commercial Services</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Silvio is responsible for Commercial Services delivery and ensuring effective deployment of customer solutions...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Silvio Renzi</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Silvio is responsible for Commercial Services delivery and ensuring effective deployment of customer solutions. Silvio began his career over 19 years ago at AT&T and Bellcore. He later joined Wisor Telecom as Assistant Vice President of Delivery. In 2002 Mr. Renzi founded Solvent Inc. a technology company focused on Network Security and Performance Management. As its Chief Executive Officer, Mr. Renzi raised the investor capital to grow the company and provided strategic and operational guidance for development of SolventViewTM. Silvio joined TurningPoint in 2009.
+
+Silvio holds an MBA from Seton Hall University, School of Business Management, and BSBA from Boston University, School of Management.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/1d58a60.jpg" alt="">
+							</div>
+							<h3>Tsippora Rosenberg, PMP</h3>
+							<h2>Vice President of Federal Telecommunications Services</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Tsippora Rosenberg is Turning Point’s Vice President of Federal Telecommunications Services...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Tsippora Rosenberg, PMP</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Tsippora Rosenberg is Turning Point’s Vice President of Federal Telecommunications Services. In this role, she is responsible for Federal Telecom Engineering and Delivery organizations who serve the Federal Agencies currently using NiOS to manage their Telecommunications (Wired and Wireless) Services and Assets. She also oversees delivery of Cloud Services.
+
+Tsippora has close to 30 years of experience in the software industry with a strong focus on commercial enterprise software for the telecommunications industry. She has led departments covering software development, product management, business development, quality assurance and help desk, for both large public companies as well as privately funded start-ups. Most recently Tsippora served as Vice President of Information Services for a Fortune 500 company serving the multi-family market. Earlier positions included ownership of software products providing testing, service management and gateway capabilities to telecommunications operating companies. </p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/Satya.jpg" alt="">
+							</div>
+							<h3>Satya Govindu</h3>
+							<h2>Assistant Vice President of Software Engineering</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Satya is responsible for managing commercial delivery teams, and responsible for managing research...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Satya Govindu</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Satya is responsible for managing commercial delivery teams, and responsible for managing research & development teams at TurningPoint Inda. During his 20 year career, he has worked in research lab environments in both technical and management roles. Prior to joining TurningPoint in 2010, Satya worked for Bell Northern Research, Nortel Networks, AT&T Labs, Lucent Labs, IBM Global Services, and Tyco Submarine Systems. Satya has extensive knowledge of software architecture, standards-based large scale software systems, and is adept at leading and motivating highly technical teams.
+
+Satya holds a Master of Science in Computer Science and Engineering from the University of Texas at Arlington, USA.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="ca-container3" class="ca-container mgmt">
+				<div class="ca-wrapper">
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/Ramesh_Chintag.jpg" alt="">
+							</div>
+							<h3>Ramesh Chintagumpala</h3>
+							<h2>Assistant Vice President - Federal Health IT</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Ramesh serves as Assistant Vice President for Health Information Technology Services at TurningPoint...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Ramesh Chintagumpala</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Ramesh serves as Assistant Vice President for Health Information Technology Services at TurningPoint and is responsible for providing leadership in service delivery and executive oversight for several accounts supporting the Centers for Medicare & Medicaid Services (CMS) and Department of Health and Human Services (HHS). Ramesh has over 19 years of Information Technology experience, including over 11 years of experience within the health care industry. Prior to joining TurningPoint in 2010, Ramesh served in several leadership roles at Maricom Systems, Select Computing, and General Electric (GXS).
+
+Ramesh holds a Masters of Science in Technology Management from George Mason University and a Chief Information Officer Certification from CIO University. He also holds PMP, ITIL, and CISSP professional certifications.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/marguerite.jpg" alt="">
+							</div>
+							<h3>Marguerite Rogers</h3>
+							<h2>Director of Government Solutions</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Marguerite oversees the Capture and Proposal team at TurningPoint. She joined TurningPoint in 2007...</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Marguerite Rogers</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Marguerite oversees the Capture and Proposal team at TurningPoint. She joined TurningPoint in 2007 as the Human Resources Recruiter, and has since worked as Communications Director and Proposal Manager. In her current role, she is responsible for designing and implementing business development strategies to capture specific government opportunities. She oversees all phases of the federal government proposal process, from capture through to contract award. Before joining TurningPoint, Marguerite was an Assistant Editor for the Alexandria Gazette and a volunteer English teacher working for WorldTeach, Inc. in the Galapagos Islands, Ecuador.
+
+Marguerite attended Towson University in Baltimore, MD, and has a BS in Political Science and English.</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-ico">
+								<img class="mgmt-img img-responsive" src="../assets/img/mgmt-team/1821ebe.jpg" alt="">
+							</div>
+							<h3>Dorothy Fera, CPA</h3>
+							<h2>Director of Finance and Contracts</h2>
+							<h4>
+								<span class="ca-quote">&ldquo;</span>
+								<span>Dorothy is responsible for managing TurningPoint's finance and contracts organization....</span>
+							</h4>
+								<a href="#" class="ca-more">more...</a>
+						</div>
+						<div class="ca-content-wrapper">
+							<div class="ca-content">
+								<h6>Dorothy Fera, CPA</h6>
+								<a href="#" class="ca-close">close</a>
+								<div class="ca-content-text" style="">
+									<p>Dorothy is responsible for managing TurningPoint's finance and contracts organization. She has over 20 years of business management experience with a focus on finance and contracts management. Dorothy has worked in large organizations that provided services to both federal government and commercial sector clients. Prior to joining TurningPoint, Dorothy was part of the management team at Parsons Consulting Group, which specialized in Telecommunications Expense management for both federal and commercial clients. Dorothy had a long career with IBM Corporation involving various management roles. Dorothy earned a Bachelor of Arts in Psychology from University of Notre Dame, a Masters of Business Administration from University of Maryland, and is a Certified Public Accountant (CPA).</p>
+								</div>
+								<ul>
+									<!--<li><a href="#">Read more</a></li>
+									<li><a href="#">Share this</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div><!--/end container-->
+</div>
+  <!--=== Suvbscribe ===-->
+    <div class="tp-subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 md-margin-bottom-20">
+                    <h2>subscribe to our  <strong>newsletter</strong></h2>
+                </div>  
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your email...">
+                        <span class="input-group-btn">
+                            <button class="btn" type="button"><i class="fa fa-envelope-o"></i></button>
+                        </span>
+                    </div>    
+                </div>
+            </div>
+        </div><!--/end container-->
+    </div>
+    <!--=== End Suvbscribe ===-->
+    <!--=== Footer v4 ===-->
+    <div class="footer-v4">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">                     
+                        <p>
+                            2016 &copy; TurningPoint. ALL Rights Reserved. 
+                           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">  
+                        
+                    </div>
+                </div>
+            </div> 
+        </div><!--/copyright--> 
+    </div>
+    <!--=== End Footer v4 ===-->
+</div><!--/wrapper-->
+<div class="overlay overlay-scale">
+	<button type="button" class="overlay-close">Close</button>
+	<div class="info"><h3>Content goes here</h3><p>interesting text about information on an infographic</p> </div>
+</div>
+<!-- JS Global Compulsory -->
+<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script src="../assets/plugins/back-to-top.js"></script>
+<script src="../assets/js/plugins/responsive-tabs.js"></script>
+<script src="../assets/plugins/smoothScroll.js"></script>
+<script src="../assets/plugins/jquery.parallax.js"></script>
+<script src="../assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script src="../assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="../assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!-- JS Page Level -->
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/plugins/owl-carousel.js"></script>
+<script src="../assets/js/plugins/revolution-slider.js"></script>
+<script src="../assets/js/plugins/style-switcher.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.easing.1.3.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="../assets/js/jquery.contentcarousel.js"></script>
+<script type="text/javascript">
+	$('#ca-container').contentcarousel();
+	$('#ca-container2').contentcarousel();
+	$('#ca-container3').contentcarousel();
+	var int = setInterval("$('.ca-nav-next').trigger('click');",1000);    
+
+	$('.ca-item').hover(function(){
+		clearInterval(int);
+	},function(){
+		int = setInterval("$('.ca-nav-next').trigger('click');",1000);    
+	});
+</script>
+<script>
+    jQuery(document).ready(function() {
+        App.init();
+        App.initScrollBar();
+        App.initParallaxBg();
+        OwlCarousel.initOwlCarousel();
+        RevolutionSlider.initRSfullWidth(); 
+ 
+});
+ (function($) {
+      fakewaffle.responsiveTabs(['xs', 'sm']);
+  })(jQuery);
+</script>
+<!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+</body>
+</html>
