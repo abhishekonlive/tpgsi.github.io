@@ -2,7 +2,7 @@
 .ca-container{
 	position:relative;
 	margin:25px auto 20px auto;
-	width:990px;
+	width:1090px;
 	height:450px;
 }
 .ca-wrapper{
@@ -13,7 +13,7 @@
 .ca-item{
 	position:relative;
 	float:left;
-	width:330px;
+	width:275px;
 	height:100%;
 	text-align:center;
 }
@@ -33,8 +33,8 @@
 .ca-close{
 	position:absolute;
 	top:10px;
-	right:10px;
-	background:#fff url(../images/cross.png) no-repeat center center;
+	right:20px;
+	background:#fff url(../img/cross.png) no-repeat center center;
 	width:27px;
 	height:27px;
 	text-indent:-9000px;
@@ -111,8 +111,9 @@
 	position:relative;
 }
 .ca-item h4 span{
-	text-indent:40px;
-	display:block;
+	    text-indent: 34px;
+    display: block;
+    line-height: 18px;
 }
 .ca-item h4  span.ca-quote{
 	color:#f4eee3;
@@ -133,7 +134,7 @@
 	overflow:hidden;
 }
 .ca-content{
-	width:660px;
+	width:800px;
 	overflow:hidden;
 }
 .ca-content-text{

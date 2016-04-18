@@ -51,7 +51,7 @@
 				cache.winpos		= aux.getWinPos( $item.position().left, cache );
 				$wrapper.find('div.ca-item').not( $item ).hide();
 				$item.find('div.ca-content-wrapper').css( 'left', cache.itemW + 'px' ).stop().animate({
-					width	: cache.itemW * 2 + 'px',
+					width	: cache.itemW * 3 + 'px',
 					left	: cache.itemW + 'px'
 				}, opts.itemSpeed, opts.itemEasing)
 				.end()
@@ -133,6 +133,7 @@
 					case 0 					: return 1; break;
 					case cache.itemW 		: return 2; break;
 					case cache.itemW * 2 	: return 3; break;
+					case cache.itemW * 3 	: return 4; break;
 				}
 			}
 		},
@@ -210,19 +211,6 @@
 							return false;
 						});
 						
-						// navigate left
-						$navPrev.bind('click.contentcarousel', function( event ) {
-							if( cache.isAnimating ) return false;
-							cache.isAnimating	= true;
-							aux.navigate( -1, $el, $wrapper, settings, cache );
-						});
-						
-						// navigate right
-						$navNext.bind('click.contentcarousel', function( event ) {
-							if( cache.isAnimating ) return false;
-							cache.isAnimating	= true;
-							aux.navigate( 1, $el, $wrapper, settings, cache );
-						});
 						
 						// // adds events to the mouse
 						// $el.bind('mousewheel.contentcarousel', function(e, delta) {
